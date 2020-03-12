@@ -6,52 +6,242 @@
     <title>Juan Cruz Gonzalez</title>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
 </head>
 <body>
-    <nav>
-        <div class="navegador">
-            <ul>
-                <li><a href="#descripcion">¿Quién soy?</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <header>
+        <div class="portada">
+            <h1>Juan Cruz Gonzalez</h1>
+            <h2 class="fullstack">Full Stack Web Developer</h2>
+            <a href="#descripcion" class="more-about">More About Me</a>
+            <ul class="rrss">
+                <li class="fb">
+                    <a href="https://www.facebook.com/juancruz.gonfer" target="_blank">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="insta">
+                    <a href="https://www.instagram.com/juan.shift" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="tw">
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="linkedin">
+                    <a href="https://www.linkedin.com/in/juan-cruz-gonzalez-41b09193/" target="_blank">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="git">
+                    <a href="https://github.com/shift-developer" target="_blank">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
             </ul>
         </div>
-    </nav>
-    <header>
-        <img class="imagen-portada" src="images/notebook-mesa.jpg" alt="fondo notebook codigo">
-        <div class="contenedor-nombrefoto">
-            <img class="imagen-perfil" src="images/perfil.jpg" alt="Imagen de Juan Cruz Gonzalez">
-            <h1>Juan Cruz <br/> Gonzalez</h1>
-            <h2 class="fullstack"><i class="fa fa-code" aria-hidden="true"></i> Full Stack Web Developer</h2>
-        </div>
+        <img class="imagen-portada" src="images/mundo.jpg" alt="fondo mundo">
+        <img class="imagen-portada-mobile" src="images/mundo16-9.jpg" alt="fondo mundo">
     </header>
-    <section class="descripcion">
-        <div id="descripcion"></div>
-        <div class="caja-descripcion">
-            <p><i class="fa fa-map-marker" aria-hidden="true"></i>Vivo en Córdoba, Argentina</p>
-            <p><i class="fa fa-user" aria-hidden="true"></i>Tengo 23 años</p>
-            <p><i class="fa fa-graduation-cap" aria-hidden="true"></i>Estudié Desarrollo Web Full Stack en Acámica</p>
-            <p><i class="fa fa-code" aria-hidden="true"></i>Web developer</p>
+
+    <nav>
+        <input type="checkbox" id="btn-menu">
+        <label class="menu-icon-container" for="btn-menu">
+            <div class="menu-icon">
+                <div class="line-menu-icon"></div>
+                <div class="line-menu-icon"></div>
+                <div class="line-menu-icon"></div>
+            </div>
+        
+        </label>  
+
+        <div class="menu">
+            <a href="#top" class="boton-arriba"><h2>Juan Cruz</h2></a>
+            <ul>
+                <li><a href="#descripcion">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Proyects</a></li>
+                <li><a href="#contacto">Contact</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+
+    <section id="descripcion">
+        <div class="container-column">
+            <div class="elemento-linkeado"></div>
+            <div class="container-title">
+                <h2 class="about-title">ABOUT ME</h2>
+            </div>
+            <img class="imagen-perfil" src="images/perfil.jpg" alt="Imagen de Juan Cruz Gonzalez">
+            <div class="container-descripcion">
+                <div class="ubicacion">
+                    <img src="images/ubicacion.png" alt="Ubicacion logo">
+                    <p>Vivo en Córdoba, Argentina</p>
+                </div>
+                <div class="edad">
+                    <img src="images/edad.png" alt="edad logo">
+                    <p>Tengo 23 años</p>
+                </div>
+                <div class="estudios">
+                    <img src="images/educacion.png" alt="educacion logo">
+                    <p>Estudié en Acámica</p>
+                </div>
+                <div class="especificacion">
+                    <img src="images/icons8-código-fuente-100.png" alt="codigo logo">
+                    <p>Front End y Back End Developer</p>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="tecnologias">
-        <div id="habilidades"></div>
 
+    <img class="fondo2" src="images/notebook-black2.jpg">
+    <img class="fondo2-mobile" src="images/notebook-black-smartphone.jpg">
+
+    <section id="skills" class="habilidades-container">
+        <div>
+            <h2 class="skills-title">SKILLS</h2>
+        </div>
+        <div class="container-skill-progress">
+            <div class="row">
+                <div class="container-elements">
+
+                    <div class="skill">
+                        <p>
+                            HTML<span>98%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width:98%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p>
+                            CSS<span>95%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p>
+                            Javascript<span>5%</span>
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width:5%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="proyectos">
-        <div id="proyectos"></div>
 
+    <section id="portfolio" class="proyectos">
+        <div>
+            <h2 class="proyects-title">PORTFOLIO</h2>
+        </div>
+        <div class="galeria-container">
+            <div class="proyect-container">
+                <img class="reloj" src="images/reloj.jpg" alt="reloj ejercicio css">
+                <p>Reloj con CSS</p>
+            </div>
+            <div class="proyect-container">
+                <img class="artista-favorito" src="images/artistafav.png" alt="Artista favorito">
+                <p>Artista Favorito: Eminem</p>
+            </div>
+            <div class="proyect-container">
+                <img class="podcast" src="images/podcast.png" alt="podcast proyecto">
+                <p>Proyecto #1 Acamica: Podcast Channel</p>
+            </div>
+            <div class="proyect-container">
+                <img class="personal-landing" src="images/paginadepresentacion.png" alt="presentacion">
+                <p>Personal landing page</p>
+            </div>
+        </div>
     </section>
-    <section class="contacto">
-        <div id="contacto"></div>
 
+    <section id="contacto" class="all-contacto-container">
+        <div>
+            <h2 class="contact-title">CONTACT</h2>
+        </div>
+        <div class="contacto-container">
+            <div class="contacto-filas">
+                <div class="contacto-details">
+                    <form>
+                        <div class="fila-container-form">
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <label>Your First Name *</label>
+                                <input type="text" name="fname" class="form-control" required="">
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <label>Your Last Name *</label>
+                                <input type="text" name="lname" class="form-control" required="">
+                            </div>
+                        </div>
+
+                        <div class="fila-container-form">
+                            <div class="form-group">
+                                <i class="fa fa-envelope"></i>
+                                <label>Your Email *</label>
+                                <input type="email" name="email" class="form-control" required="">
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-tag"></i>
+                                <label>Subject *</label>
+                                <input type="text" name="sub" class="form-control" required="">
+                            </div>
+                        </div>
+
+                        <div class="fila-container-form">
+                            <div class="form-group">
+                                <i class="fa fa-tag"></i>
+                                <label>Your Message *</label>
+                                <textarea name="msg" class="form-control" required=""></textarea>
+                            </div>
+                        </div>
+
+                        <input class="submit-button" type="submit" name="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
-
+        <ul class="rrss footer">
+            <li class="fb">
+                <a href="https://www.facebook.com/juancruz.gonfer" target="_blank">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="insta">
+                <a href="https://www.instagram.com/juan.shift" target="_blank">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="tw">
+                <a href="https://twitter.com/" target="_blank">
+                    <i class="fab fa-twitter-square" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="linkedin">
+                <a href="https://www.linkedin.com/in/juan-cruz-gonzalez-41b09193/" target="_blank">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="git">
+                <a href="https://github.com/shift-developer" target="_blank">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
     </footer>
-    
 </body>
 </html>

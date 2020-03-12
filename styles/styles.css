@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin:0;
     padding:0;
@@ -7,104 +10,669 @@ body {
 .imagen-portada{
     width: 100%;
     height: 100%;
-}
-nav {
-    position: sticky;
+    filter: brightness(35%);
+    position: absolute;
     top: 0;
-    z-index: 3;
+    z-index: -1;
 }
-.navegador {
-    width: 100%;
-    height: 30px;
-    position: absolute;
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
-    padding-bottom: 10px;
-    background-color:rgba(0,0,0,0.05);
+.imagen-portada-mobile {
+    display: none;
 }
-.navegador ul {
-    list-style-type: none;
-    text-align: right;
-    border: 0px;
-    margin: 0px;
-    padding-top: 10px;
-    background-color:rgba(0,0,0,0);
+
+
+/* header*/
+
+.portada {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.navegador li {
-    display: inline;
-    text-align: left;
-    margin: 0;
-    margin-right: 20px;
-}
-.navegador ul a {
-    padding: 8px 7px 8px 7px;
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    font-weight: 100;
-    opacity: 0.8;
-    margin: 0px;
+.more-about {
     text-decoration: none;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.2);
+    border: solid 1px white;
+    padding: 1rem 3rem 1rem 3rem;
+    font-family: 'Opens Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.25s;
 }
-.navegador li a:hover{
-    opacity: 1;
-    background-color: rgba(255,255,255,0.05);
- }
-.contenedor-nombrefoto {
-    position: absolute;
-    top: 50px;
-    padding: 10px;
-    left: 400px;
-    width: 900px;
-    height: 310px;
+.more-about:hover {
+    background-color:  #323edd;
+    border-color: #323edd;
+    transition: 0.25s;
+    transform: scale(1.15);
 }
 h1{
-    font-family: 'Oswald', sans-serif;
-    font-size: 130px;
-    font-weight: 100;
-    letter-spacing: -5px;
-    line-height: 1;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 2.5rem;
     margin: 0px;
-    position: relative;
+    z-index: 3;
     color: white;
-    display: inline-block;
-    text-shadow: 1px 2px 20px black; 
-}
-/*La idea es animarla para evitar que se cargue antes que el fondo */
-.imagen-perfil {
-    display: inline-block;
-    width: 225px;
-    height: 225px;
-    margin: 0px;
-    padding: 0px;
-    border: 5px solid #14868c;
     text-shadow: 1px 2px 20px black; 
 }
 .fullstack {
-    font-family: 'Oswald', sans-serif;
-    font-size: 40px;
-    font-weight: 15;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing:2px;
+    font-weight: 100;
     color: white;
-    position: absolute;
-    top: 380px;
-    left: 150px;
+    text-transform: uppercase;
     text-shadow: 1px 2px 20px black; 
 }
-.fullstack i {
-    font-size: 30px;
+.rrss {
+    color: white;
+    display: flex;
+    margin-top: 4rem;
+    list-style: none;
+    margin-right: 2.5rem;
+    margin-bottom: 9rem;
 }
-.descripcion {
-    background-color: #1a3e59;
-    width: 100%;
-    height: 500px;
-    position: absolute;
-    top: 650px;
-    box-shadow: 1px 3px 10px black;
+.rrss li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin: 1.5rem;
+    text-align: center;
+    transition: 0.25s;
+}
+.rrss li a:hover {
+    color: #323edd;
+    transform: scale(1.25);
+    transition: 0.25s;
 }
 
-.caja-descripcion {
-    font-family: 'Spartan';
+
+/*navegador*/
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    margin-top: 5rem;
+}
+
+.menu{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+.menu ul a {
+    text-decoration: none;
+    display: block;
+    color: #f4f5f6;
+    text-transform: uppercase;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0.9rem;
+    transition: 0.25s;
+    margin: 0;
+    margin-right: 1rem;
+}
+.menu ul a:hover {
+    background-color: #323edd;
+    transform: scale(1.05);
+    transition: 0.25s;
+}
+.menu h2 {
+    color: #f4f5f6;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding: 0.2rem;
+    margin-left: 1rem;
+    display: flex;
+    transition: 0.25s;
+}
+.menu h2:hover {
     color: white;
-    font-size: 25px;
+    transform: scale(1.05);
+    text-shadow: 1px 1px 15px white;
+    transition: 0.25s;
+}
+.boton-arriba{
+    text-decoration: none;
+    color: #f4f5f6;
+}
+
+
+/* Responsive menu */
+
+
+#btn-menu{
+	display: none;
+}
+
+/* icono de menu oculto */
+nav .menu-icon-container {
+    display: block;
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    display: none;
+}
+
+.menu-icon {
+    background-color: black;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.line-menu-icon {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+nav.menu-icon-container:hover{
+	cursor: pointer;
+    background: rgba(255,255,255,0.05);
+}
+
+
+/*Sección 1: About me */
+
+#descripcion {
+    color:#656c6d;
+    font-family: 'Open Sans',sans-serif;
+    line-height: 20px;
+    padding-top: 5rem;
+    margin-bottom: 6rem;
+}
+
+.about-title {
+    color:rgb(51, 51, 51);
+    display: block;
+    font-family: 'Monserrat',sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 2.35rem;
+    padding-bottom: 0.65rem;
+    text-align: center;
+}
+.container-descripcion{
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 1s;
+}
+.container-descripcion p{
+    font-size: 1.1rem;
+    text-align: center;
+    width: min-content;
+}
+.ubicacion, .edad, .estudios, .especificacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-perfil {
+    display: block;
+    width: 10%;
+    height: 10%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 50%;
+    padding: 0.25%;
+    border: 1px solid rgb(221, 221, 221);
+    align-self: center;
+    transition: 1s;
+}
+.imagen-perfil:hover {
+    transform: scale(1.5);
+    transition: 1s;
+}
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Imagen de fondo debajo de la 1era seccion*/
+
+.fondo2{
+    display: block;
+    position: relative;
+    top: 2rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}  
+.fondo2-mobile {
+    display: none;
+}
+
+/* Habilidades*/
+.habilidades-container{
+    background-color: rgb(26, 30, 35);
+    padding-bottom: 20rem;
+    padding-top: 2rem;
+}
+.skills-title {
+    color:white;
+    display: block;
+    font-family: 'Monserrat',sans-serif;
+    padding-top: 6rem;
+    padding-bottom: 0.65rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 2.35rem;
+}
+
+.container-skill-progress{
+    color:rgb(101, 108, 109);
+    font-family: 'Open Sans',sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.container-elements{
+    position: relative;
+}
+.container-elements{
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+.skill {
+    font-size: 1rem;
+    color: white;
+    margin: 0.6rem;
+}
+.skill span {
+    float: right;
+}
+.progress {
+    height: 0.6rem;
+    width: 100%;
+    margin-bottom: 1.8rem;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #333;;
+}
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 1.2rem;
+    color: #fff;
+    text-align: center;
+    background-color: #323edd;
+}
+
+/*Proyectos o portfolio*/
+
+.proyectos{
+    color:#656c6d;
+    font-family: 'Open Sans',sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 20rem;
+}
+.proyects-title{
+    color:rgb(51, 51, 51);
+    display: block;
+    font-family: 'Monserrat',sans-serif;
+    font-size: 2.2rem;
+    margin-top: 5rem;
+    font-weight: 700;
+    line-height: 2.35rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+.galeria-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.proyect-container {
+    font-size: 1.1rem;
+    text-align: center;
+    width: min-content;
+    transition: 0.5s;
+    opacity:70%;
+}
+.proyect-container img{
+    width: 200px;
+    height: 200px;
+}
+.proyect-container:hover{
+    transform: scale(1.15);
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+/* Contacto */
+
+.all-contacto-container {
+    background-color: rgb(26, 30, 35);
+    padding-bottom: 10rem;
+}
+
+.contact-title {
+    color:white;
+    display: block;
+    font-family: 'Monserrat',sans-serif;
+    padding-top: 6rem;
+    padding-bottom: 0.65rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 2.35rem;
+}
+.contacto-container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: 8rem;
+    margin-left: 8rem;
+    font-family: 'Open Sans',sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.contacto-filas{
+    margin-right: -1rem;
+    margin-left: -1rem;
+}
+.contacto-details{
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.fila-container-form {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.form-group {
+    margin-bottom: 15px;
+    
+}
+.form-group i {
+    display: inline-block;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.form-control {
+    height: 2rem;
+    font-family: 'Opens Sans',sans-serif;
+    color: rgb(85, 85, 85);
+    font-size: 0.9rem;
+    width: 100%;
+}
+.submit-button{
+    font-family: 'Open Sans',sans-serif;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0.9rem 5rem;
+    font-size: 18px;
+    border-radius: 0;
+    font-weight: 700;
+    background-color: #323edd;
+    border: 0;
+    opacity:80%;
+    transition: 0.25s;
+}
+.submit-button:hover{
+    transform: scale(1.15);
+    opacity: 100%;
+}
+/* */
+footer{
+    background-color: rgb(26, 30, 35);
+    margin: 0;
+    padding-bottom: 2rem;
+    padding: 0;
+    border: 0;
+}
+footer h3 {
+    font-family: 'Monserrat',sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-weight: 200;
+}
+.footer {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.footer li a{
+    font-size: 1rem;
+}
+
+
+
+/* MEDIA QUERIES*/
+/*La pagina fue diseñada en 1440px */
+
+@media screen and (max-width:1024px) {
+    nav {
+        margin-top: -1rem;
+    }
+    .imagen-perfil {
+        width: 20%;
+        height: 20%;
+    }
+   
+}
+
+
+
+/* Tablet */
+@media screen and (max-width:768px) {
+
+    nav .menu-icon-container {
+        display: block;
+    }
+    
+    .menu {
+        flex-direction: column;
+        width: 90%;
+        position: absolute;
+        margin-top: -150%;
+        transition: 150ms ease;
+    }
+    .menu-icon {
+        display: inline-block;
+        padding-top: 0.5rem ;
+    }
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    #btn-menu:checked ~ .menu{
+        margin: 0;
+    }
+
+    .imagen-perfil {
+        width: 25%;
+        height: 25%;
+    }
+    .container-skill-progress{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 4rem;
+    }
+    .container-elements{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .proyect-container {
+        margin-bottom: 3rem;
+    }
+    .proyectos{
+        padding-bottom: 1rem;
+    }
+    .submit-button{
+        opacity: 100%;
+    }
+    .galeria-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+}
+
+
+/* Mobile*/
+@media screen and (max-width: 480px){
+    h1{
+        font-family: 'Monserrat', sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 5rem;
+        margin: 0px;
+        z-index: 3;
+        color: white;
+        text-shadow: 1px 2px 20px black; 
+    }
+
+    .imagen-portada{
+        display: none;
+    }
+    .imagen-portada-mobile {
+        display: flex;
+        width: 100%;
+        filter: brightness(35%);
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+    h1 {
+        font-family: 'Monserrat', sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 3.5rem;
+        text-align: center;
+        margin: 0px;
+        z-index: 3;
+        color: white;
+        text-shadow: 1px 2px 20px black;
+    }
+
+    nav {
+        margin-top: 2.5rem;
+        width: 100%;
+    }
+    nav .menu-icon-container {
+        width: 100%;
+    }
+    
+    .menu {
+        margin-top: -500%;
+        width: 100%;
+        transition: 150ms ease;
+    }
+    .imagen-perfil {
+        display: block;
+        width: 40%;
+        height: 40%;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 50%;
+        padding: 0.25%;
+        border: 1px solid rgb(221, 221, 221);
+        align-self: center;
+        transition: 1s;
+    }
+    .container-descripcion{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: space-evenly;
+        align-items: center;
+        transition: 1s;
+    }
+    .ubicacion, .edad, .estudios, .especificacion {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    .fondo2{
+        display: none;
+    }
+    .fondo2-mobile{
+        display: flex;
+        width: 100%;
+        filter: grayscale(85%);
+        position: relative;
+        top: 1rem;
+    }
+    .container-skill-progress{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 4rem;
+    }
+    .container-elements{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .proyect-container {
+        margin-bottom: 3rem;
+    }
+    .proyectos{
+        padding-bottom: 1rem;
+    }
+}
+
+/* Mobile M */
+@media screen and (max-width: 375px){
+    nav {
+        margin-top: -2.9rem;
+    }
+    .menu {
+        margin-top: -300%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    nav {
+        margin-top: -2.9rem;
+    }
+    .menu {
+        margin-top: -300%;
+    }
 }
